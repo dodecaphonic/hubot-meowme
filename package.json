@@ -1,6 +1,6 @@
 {
   "name": "hubot-meowme",
-  "description": "A hubot plugin that regales you with funny cat pictures and gifs."
+  "description": "A hubot plugin that regales you with funny cat pictures and gifs.",
   "version": "0.0.1",
   "author": "Vitor Capela <dodecaphonic@gmail.com>",
   "license": "MIT",
