@@ -1,0 +1,36 @@
+{
+  "name": "hubot-meowme",
+  "description": "A hubot plugin that regales you with funny cat pictures and gifs."
+  "version": "0.0.1",
+  "author": "Vitor Capela <dodecaphonic@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dodecaphonic/hubot-meowme",
+
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+
+  "engines": {
+    "node": ">=0.10.15",
+    "npm": ">=1.3.5"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dodecaphonic/hubot-meowme.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/dodecaphonic/hubot-meowme/issues"
+  },
+
+  "dependencies": {
+    "hubot":         ">= 2.6.0 < 3.0.0",
+    "hubot-scripts": ">= 2.5.0 < 3.0.0",
+    "coffee-script": "~1.6",
+    "cheerio": ""
+  },
+
+  "main": "index.coffee"
+}
