@@ -18,18 +18,20 @@
 
 module.exports = (robot) ->
 
+  meowme_url = process.env.MEOWME_URL || 'http://meowme.herokuapp.com'
+
   robot.respond /cat me/i, (msg) ->
-    msg.http("http://meowme.herokuapp.com/random")
+    msg.http("#{meowme_url}/random")
       .get() (err, res, body) ->
         msg.send JSON.parse(body).cat
 
   robot.respond /cat bomb( (\d+))?/i, (msg) ->
     count = msg.match[2] || 5
-    msg.http("http://meowme.herokuapp.com/bomb?count=" + count)
+    msg.http("#{meowme_url}/bomb?count=" + count)
       .get() (err, res, body) ->
         msg.send cat for cat in JSON.parse(body).cats
 
   robot.respond /how many cats are there/i, (msg) ->
-    msg.http("http://meowme.herokuapp.com/count")
+    msg.http("#{meowme_url}/count")
       .get() (err, res, body) ->
         msg.send "There are #{JSON.parse(body).cat_count} cats."
